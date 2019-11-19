@@ -1,16 +1,17 @@
-body {
-
+/* body {
+ 
   margin: 0px;
-  overflow-x: hidden;
-
+  overflow-x: hidden; 
+   
 
 }
 
 .content {
-
-    max-width: 450px;
+    max-width: 450px; 
     margin: auto;
-}
+    background-image: url(media/Instagram-Stories-UK-881957.jpg)
+
+} */
 
 .black-link{
 
