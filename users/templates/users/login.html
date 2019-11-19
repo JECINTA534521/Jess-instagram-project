@@ -1,21 +1,25 @@
-{% extends "photo_blog/base.html" %}
-{% load material_form %}
-{% block content %}
+{% extends "photo_blog/base.html" %} {% load material_form %} {% block content%}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <form class="active" method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+          {% form form=form %}{% endform %}
+          <div class="form-group">
+            <button type="submit" name="_submit" class="btn">Submit</button>
+            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+          </div>
+          Don't have an account?
+          <a href="{% url 'register' %}">Register</a>
+        </fieldset>
+      </form>
+    </div>
 
-
-<div class="">
-  <form class ="active" method="POST">
-    {% csrf_token %}
-    <fieldset class="form-group">
-      {% form form=form %}{% endform %}
-      <div class="form-group">
-        <button type="submit" name="_submit" class="btn">Submit</button>
-        <a href="{% url 'password_reset' %}">Forgot Password?</a>
-      </div>
-      Don't have an account?
-      <a href="{% url 'register' %}">Register</a>
-    </fieldset>
-  </form>
+    <div class="col-md-4">
+      <img src="/media/Instagram-Stories-UK-881957.jpg" width="500px" height="500px"/>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
