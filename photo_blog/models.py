@@ -72,10 +72,10 @@ class Comment(models.Model):
 # Notification model is used for three different types of notifications: like,
 # comment, and follow notifications.
 class Notification(models.Model):
-    post = models.ForeignKey('photo_blog.Post', on_delete=models.CASCADE, null=True, blank=True)
-    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, null=True, blank=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
-    liked = models.BooleanField(default=False, null=True)
-    followed = models.BooleanField(default=False, null=True)
+    post = models.ForeignKey('photo_blog.Post', on_delete=models.CASCADE, blank=True)
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE,)
+    liked = models.BooleanField(default=False,)
+    followed = models.BooleanField(default=False,)
     date_posted = models.DateTimeField(null=True, blank=True)
