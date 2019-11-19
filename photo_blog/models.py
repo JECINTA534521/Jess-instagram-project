@@ -23,10 +23,10 @@ class Post(models.Model):
         return self.caption
 
     def get_absolute_url(self):
-        return ('photo_blog-detail', kwargs={'pk': self.pk})
+        return ('photo_blog-detail',)
 
     def get_api_like_url(self):
-        return ('photo_blog-post_like_api', kwargs={"pk": self.pk})
+        return ('photo_blog-post_like_api',)
 
 # Save checks exif information for cellphone photos to see what orientation the
 # photo was taken in, then rotates the image to be upright. images are reduced
