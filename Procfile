@@ -1,0 +1,1 @@
+web: gunicorn stagram.wsgi --log-file -
