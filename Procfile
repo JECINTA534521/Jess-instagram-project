@@ -1,1 +1,1 @@
-web: gunicorn stagram.wsgi --log-file -
+web: gunicorn stagram.wsgi --log-file - --log-level debug
