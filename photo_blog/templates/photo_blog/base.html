@@ -1,4 +1,4 @@
-{% load material_form %}
+
 {% load staticfiles %}
 <!doctype html>
 <html lang="en">
@@ -20,12 +20,13 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark">
-      <a href="{% url 'photo_blog-home' %}"><img class="navbar-brand" height = "48" >Jess-Instagram</a>
+
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <a href="{% url 'photo_blog-home' %}"><img class="navbar-brand" height = "48" >Jess-Instagram</a>
       {% if user.is_authenticated %}
       <a class="nav-item inline ml-auto" href="{% url 'direct_messages-inbox' %}"><img src="/media/nav_buttons/inbox.png" height="30" width="30"></a>
       {% endif %}
-    </nav>
+      </nav>
     <div class="content mt-3">
       
       {% if messages %}
@@ -64,11 +65,6 @@
           </div>
         </div>
     {% endif %}
-
-
-
-    {% include 'material/includes/material_css.html' %}
-    {% include 'material/includes/material_js.html' %}
 
   </body>
 </html>
