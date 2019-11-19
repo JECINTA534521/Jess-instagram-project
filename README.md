@@ -81,8 +81,7 @@ Once you have followed the instructions to create a user, run the server
 python manage.py runserver
 If there were no errors anywhere, you can now go to http://localhost:8000/ in your browser to view a local copy of Jess-Instagram
 
-Live link:
-
+Live link:http://127.0.0.1:8800/
 Built With
 Django - Web Framework
 Boostrap - HTML & CSS

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'photo_blog.apps.PhotoBlogConfig',
     'users.apps.UsersConfig',
     'direct_messages.apps.DirectMessagesConfig',
-    'material',
+    #'material',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
