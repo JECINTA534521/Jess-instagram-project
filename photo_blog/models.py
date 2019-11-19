@@ -4,7 +4,6 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from users.models import Profile
-from django.urls import reverse
 from django.conf import settings
 
 
@@ -24,10 +23,10 @@ class Post(models.Model):
         return self.caption
 
     def get_absolute_url(self):
-        return reverse('photo_blog-detail', kwargs={'pk': self.pk})
+        return ('photo_blog-detail', kwargs={'pk': self.pk})
 
     def get_api_like_url(self):
-        return reverse('photo_blog-post_like_api', kwargs={"pk": self.pk})
+        return ('photo_blog-post_like_api', kwargs={"pk": self.pk})
 
 # Save checks exif information for cellphone photos to see what orientation the
 # photo was taken in, then rotates the image to be upright. images are reduced
