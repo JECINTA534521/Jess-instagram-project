@@ -24,4 +24,6 @@ urlpatterns = [
           name='password_reset_complete'),
     path('user/<str:username>/follow/', FollowUser.as_view(), name='user_follow'),
     path('user/<str:username>/followers/', ViewFollowers.as_view(), name='user_followers'),
+
+
 ]
