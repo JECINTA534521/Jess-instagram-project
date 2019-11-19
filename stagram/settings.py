@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'stagram.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql.',
-        'NAME': config('instagram'),
-           'USER': config('jecinta'),
-           'PASSWORD': config('Papichulo'),
+        'NAME':'instagram',
+        'USER':'jecinta',
+        'PASSWORD':'Papichulo',
            
     }
 }
