@@ -11,18 +11,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from rest_framework import authentication, permissions
 
 
-def register(request):
-    if request.method == 'POST':
-        form = RegistrationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Thank you, {username}. Your account has been created')
-            return redirect('login')
+# def register(request):
+#     if request.method == 'POST':
+#         form = RegistrationForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             messages.success(request, f'Thank you, {username}. Your account has been created')
+#             return redirect('login')
 
-    else:
-        form = RegistrationForm()
-    return render(request, 'users/register.html', {'form': form})
+#     else:
+#         form = RegistrationForm()
+#     return render(request, 'users/register.html', {'form': form})
 
 
 @login_required
