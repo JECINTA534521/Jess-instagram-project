@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'direct_messages.apps.DirectMessagesConfig',
     #'material',
-    'bootstrap4'
+    'bootstrap4',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
