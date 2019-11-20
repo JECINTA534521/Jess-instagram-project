@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.urls import path
 from . import views
 from .views import (
 InboxView, ThreadView, CreateDirectMessage, DeleteDirectMessage, ViewDirectMessage
@@ -6,9 +6,9 @@ InboxView, ThreadView, CreateDirectMessage, DeleteDirectMessage, ViewDirectMessa
 
 
 urlpatterns = [
-    url('inbox/', InboxView.as_view(), name='direct_messages-inbox'),
-    url('thread/<str:username>/', ThreadView.as_view(), name='direct_messages-thread'),
-    url('new/', CreateDirectMessage.as_view(), name='direct_messages-new'),
-    url('<int:pk>/', ViewDirectMessage.as_view(), name='direct_messages-detail'),
-    url('<int:pk>/delete/', DeleteDirectMessage.as_view(), name='direct_messages-delete'),
+    path('inbox/', InboxView.as_view(), name='direct_messages-inbox'),
+    path('thread/<str:username>/', ThreadView.as_view(), name='direct_messages-thread'),
+    path('new/', CreateDirectMessage.as_view(), name='direct_messages-new'),
+    path('<int:pk>/', ViewDirectMessage.as_view(), name='direct_messages-detail'),
+    path('<int:pk>/delete/', DeleteDirectMessage.as_view(), name='direct_messages-delete'),
     ]
